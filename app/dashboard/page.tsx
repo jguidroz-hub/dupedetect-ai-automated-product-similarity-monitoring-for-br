@@ -36,9 +36,9 @@ export default function DashboardPage() {
             <h3 className="font-medium">Dupe Alerts</h3>
             <p className="text-sm text-gray-500">Potential IP infringement notifications</p>
           </a>
-          <a href="/scan" className="block p-4 border rounded-lg hover:bg-blue-50 transition">
+          <a href="/products" className="block p-4 border rounded-lg hover:bg-blue-50 transition">
             <h3 className="font-medium">Manual IP Scan</h3>
-            <p className="text-sm text-gray-500">Perform on-demand marketplace scan</p>
+            <p className="text-sm text-gray-500">Perform on-demand marketplace products</p>
           </a>
         <a href="/dashboard/settings" className="block p-4 border rounded-lg hover:bg-blue-50 transition">
           <h3 className="font-medium">Settings</h3>

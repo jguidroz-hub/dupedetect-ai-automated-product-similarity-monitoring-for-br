@@ -17,7 +17,7 @@ export default function ScanPage() {
   const [newTitle, setNewTitle] = useState('');
 
   useEffect(() => {
-    fetch('/api/scan')
+    fetch('/api/products')
       .then(r => r.json())
       .then(data => { setItems(data.items || []); setLoading(false); })
       .catch(() => setLoading(false));
@@ -25,7 +25,7 @@ export default function ScanPage() {
 
   const handleCreate = async () => {
     if (!newTitle.trim()) return;
-    const res = await fetch('/api/scan', {
+    const res = await fetch('/api/products', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ title: newTitle }),
@@ -39,7 +39,7 @@ export default function ScanPage() {
   };
 
   const handleDelete = async (id: string) => {
-    await fetch(`/api/scan/${id}`, { method: 'DELETE' });
+    await fetch(`/api/products/${id}`, { method: 'DELETE' });
     setItems(prev => prev.filter(i => i.id !== id));
   };
 
@@ -61,7 +61,7 @@ export default function ScanPage() {
         </button>
       </div>
 
-      <p className="text-gray-600 mb-6">Perform on-demand marketplace scan</p>
+      <p className="text-gray-600 mb-6">Perform on-demand marketplace products</p>
 
       {showCreate && (
         <div className="mb-6 p-4 border rounded-lg bg-gray-50">
