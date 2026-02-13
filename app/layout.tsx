@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'DupeDetect AI - Automated product similarity monitoring for brands',
-  description: 'Value Proposition: Helps e-commerce brands and designers protect their intellectual property by automatically identifying and alerting them to visually and descriptively similar "dupe" products sold across online marketplaces, preventing revenue loss and brand dilution (Signal 3).',
+  description: 'Value Proposition: Helps e-commerce brands and designers protect their intellectual property by auto',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
