@@ -33,7 +33,7 @@ export const products = pgTable('products', {
   brand: text('brand').notNull(),
   imageUrl: text('image_url').notNull(),
   marketplaceUrls: jsonb('marketplace_urls').notNull(),
-  similarityThreshold: text('similarity_threshold').default(0.7),
+  similarityThreshold: text('similarity_threshold').default('0.7'),
   createdAt: timestamp('created_at').notNull(),
   updatedAt: timestamp('updated_at').notNull(),
 });
